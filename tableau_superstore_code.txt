@@ -1,0 +1,26 @@
+=========================================== TABLEAU SUPERSTORE DASHBOARD
+– CODE FILE (ONLY CALCULATED FIELDS + PARAMETERS)
+===========================================
+
+1. CALCULATED FIELDS
+
+A. Profit Ratio [Profit] / [Sales]
+
+B. Order Year YEAR([Order Date])
+
+C. Shipping Delay (Days) DATEDIFF(‘day’, [Order Date], [Ship Date])
+
+D. Selected Measure CASE [Measure Selector] WHEN “Sales” THEN [Sales]
+WHEN “Profit” THEN [Profit] END
+
+E. Negative Profit Flag IF [Profit] < 0 THEN “Loss” ELSE “Profit” END
+
+F. Sales Bins (Histogram) Created using: Right-click [Sales] → Create
+Bins → Size = 50
+
+2. PARAMETERS
+
+A. Measure Selector Name: Measure Selector Data Type: String Allowable
+Values: List Values: - Sales - Profit Current Value: Sales
+
+
